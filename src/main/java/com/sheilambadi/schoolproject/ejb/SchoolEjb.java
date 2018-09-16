@@ -35,4 +35,12 @@ public class SchoolEjb {
         return results;
     }
     
+    // get result based on student id
+    public List<Result> getStudentResults(int id){
+        Query q1 = em.createQuery("SELECT r FROM Result r WHERE r.studentId.id = :id");
+        q1.setParameter("id", id);
+        List<Result> results = q1.getResultList();
+        return results;
+    }
+    
 }

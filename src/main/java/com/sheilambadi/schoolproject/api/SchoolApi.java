@@ -10,6 +10,7 @@ import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -40,6 +41,13 @@ public class SchoolApi {
     @Path("/results")
     public List<Result> getResultsList(){
         List<Result> results = schoolEjb.getResults();
+        return results;
+    }
+    
+    @GET()
+    @Path("/students/{id}")
+    public List<Result> getStudentResults(@PathParam("id") int id){
+        List<Result> results = schoolEjb.getStudentResults(id);
         return results;
     }
     
