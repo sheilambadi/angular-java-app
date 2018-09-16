@@ -9,6 +9,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -51,4 +52,24 @@ public class SchoolApi {
         return results;
     }
     
+    @POST
+    @Path("/students/new")
+    public Student newStudent(Student student){
+        schoolEjb.addNewStudent(student);
+        return student;
+    }
+    
+    @POST
+    @Path("/exams/new")
+    public Exam newExam(Exam exam){
+        schoolEjb.addNewExam(exam);
+        return exam;
+    }
+    
+    @POST
+    @Path("/results/new")
+    public Result newExam(Result result){
+        schoolEjb.addNewResult(result);
+        return result;
+    }
 }

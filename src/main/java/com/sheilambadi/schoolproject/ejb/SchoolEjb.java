@@ -43,4 +43,25 @@ public class SchoolEjb {
         return results;
     }
     
+    // add new student
+    public Student addNewStudent(Student student){
+        em.persist(student);
+        em.flush();
+        return student;
+    }
+    
+    // add new exam
+    public Exam addNewExam(Exam exam){
+        em.persist(exam);
+        em.flush();
+        return exam;
+    }
+    
+    // add new exam
+    public Result addNewResult(Result result){
+        em.persist(result);
+        em.flush();
+        return result;
+    }
+    
 }
