@@ -1,6 +1,8 @@
 package com.sheilambadi.schoolproject.api;
 
 import com.sheilambadi.schoolproject.ejb.SchoolEjb;
+import com.sheilambadi.schoolproject.entities.Exam;
+import com.sheilambadi.schoolproject.entities.Result;
 import com.sheilambadi.schoolproject.entities.Student;
 import java.util.List;
 import javax.ejb.EJB;
@@ -21,10 +23,24 @@ public class SchoolApi {
     SchoolEjb schoolEjb;
     
     @GET()
-    @Path("/student")
-    public List<Student> getSchoolResults(){
+    @Path("/students")
+    public List<Student> getStudentsList(){
         List<Student> students = schoolEjb.getStudents();
         return students;
+    }
+    
+    @GET()
+    @Path("/exams")
+    public List<Exam> getExamsList(){
+        List<Exam> exams = schoolEjb.getExams();
+        return exams;
+    }
+    
+    @GET()
+    @Path("/results")
+    public List<Result> getResultsList(){
+        List<Result> results = schoolEjb.getResults();
+        return results;
     }
     
 }
