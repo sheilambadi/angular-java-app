@@ -43,6 +43,15 @@ public class SchoolEjb {
         return results;
     }
     
+    // get results based on student id and exam id
+    public List<Result> getStudentResultsExam(int studentId, int examId){
+        Query q1 = em.createQuery("SELECT r FROM Result r WHERE r.studentId.id = :studentId AND r.examId.id = :examId");
+        q1.setParameter("studentId", studentId);
+        q1.setParameter("examId", examId);
+        List<Result> results = q1.getResultList();
+        return results;
+    }
+    
     // add new student
     public Student addNewStudent(Student student){
         em.persist(student);
