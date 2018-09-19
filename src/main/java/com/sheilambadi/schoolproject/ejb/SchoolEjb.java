@@ -73,4 +73,16 @@ public class SchoolEjb {
         return result;
     }
     
+    // get student by id
+    public Student studentById(int id){
+        Student student = em.find(Student.class, id);
+        return student;
+    }
+    
+    // get exam by id
+    public Exam examById(int id){
+        Exam exam = em.find(Exam.class, id);
+        return exam;
+    }
+    
 }

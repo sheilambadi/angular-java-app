@@ -79,4 +79,18 @@ public class SchoolApi {
         schoolEjb.addNewResult(result);
         return result;
     }
+    
+    @GET
+    @Path("/student/data/{id}")
+    public Student studentById(@PathParam("id") int id){
+        Student student = schoolEjb.studentById(id);
+        return student;
+    }
+    
+    @GET
+    @Path("/exam/data/{id}")
+    public Exam examById(@PathParam("id") int id){
+        Exam exam = schoolEjb.examById(id);
+        return exam;
+    }
 }
