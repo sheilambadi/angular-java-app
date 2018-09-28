@@ -1,7 +1,7 @@
-/home/sheilambadi/NetBeansProjects/Litemore/school-project/src/main/java/com/sheilambadi/schoolproject/entities/Student.java
-/home/sheilambadi/NetBeansProjects/Litemore/school-project/src/main/java/com/sheilambadi/schoolproject/ejb/SchoolEjb.java
-/home/sheilambadi/NetBeansProjects/Litemore/school-project/src/main/java/com/sheilambadi/schoolproject/utils/ApplicationConfig.java
-/home/sheilambadi/NetBeansProjects/Litemore/school-project/src/main/java/com/sheilambadi/schoolproject/entities/Exam.java
-/home/sheilambadi/NetBeansProjects/Litemore/school-project/src/main/java/com/sheilambadi/schoolproject/api/ExcelService.java
-/home/sheilambadi/NetBeansProjects/Litemore/school-project/src/main/java/com/sheilambadi/schoolproject/api/SchoolApi.java
-/home/sheilambadi/NetBeansProjects/Litemore/school-project/src/main/java/com/sheilambadi/schoolproject/entities/Result.java
+/home/sheilambadi/NetBeansProjects/Litemore/Angular Final/school-project/src/main/java/com/sheilambadi/schoolproject/api/ExcelService.java
+/home/sheilambadi/NetBeansProjects/Litemore/Angular Final/school-project/src/main/java/com/sheilambadi/schoolproject/utils/ApplicationConfig.java
+/home/sheilambadi/NetBeansProjects/Litemore/Angular Final/school-project/src/main/java/com/sheilambadi/schoolproject/entities/Result.java
+/home/sheilambadi/NetBeansProjects/Litemore/Angular Final/school-project/src/main/java/com/sheilambadi/schoolproject/entities/Exam.java
+/home/sheilambadi/NetBeansProjects/Litemore/Angular Final/school-project/src/main/java/com/sheilambadi/schoolproject/ejb/SchoolEjb.java
+/home/sheilambadi/NetBeansProjects/Litemore/Angular Final/school-project/src/main/java/com/sheilambadi/schoolproject/api/SchoolApi.java
+/home/sheilambadi/NetBeansProjects/Litemore/Angular Final/school-project/src/main/java/com/sheilambadi/schoolproject/entities/Student.java

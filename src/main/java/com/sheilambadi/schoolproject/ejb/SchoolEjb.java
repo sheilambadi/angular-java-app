@@ -85,4 +85,12 @@ public class SchoolEjb {
         return exam;
     }
     
+    // get results by exam id
+    public List<Result> resultByExam(int id){
+        Query q1 = em.createQuery("SELECT r FROM Result r WHERE r.examId.id = :id");
+        q1.setParameter("id", id);
+        List<Result> results = q1.getResultList();
+        return results;
+    }
+    
 }

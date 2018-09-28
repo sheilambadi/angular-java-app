@@ -52,6 +52,13 @@ public class SchoolApi {
         return results;
     }
     
+     @GET()
+    @Path("/exams/{id}")
+    public List<Result> getResultsByExam(@PathParam("id") int id){
+        List<Result> results = schoolEjb.resultByExam(id);
+        return results;
+    }
+    
     @GET()
     @Path("/students/{studentId}/{examId}")
     public List<Result> getStudentResults(@PathParam("studentId") int studentId, @PathParam("examId") int examId){

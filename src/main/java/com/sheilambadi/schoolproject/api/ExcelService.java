@@ -16,6 +16,7 @@ public class ExcelService {
 
     private static final String FILE_PATH_EXAMS = "/home/sheilambadi/Desktop/Samples/exam sample.xlsx";
     private static final String FILE_PATH_STUDENTS = "/home/sheilambadi/Desktop/Samples/student sample.xlsx";
+    private static final String FILE_PATH_RESULTS = "/home/sheilambadi/Desktop/Samples/result sample.xlsx";
 
     @GET
     @Path("/exams")
@@ -43,6 +44,18 @@ public class ExcelService {
                 "attachment; filename=student-excel-file.xls");
         return response.build();
 
+    }
+    
+    @GET
+    @Path("/results")
+    @Produces("application/vnd.ms-excel")
+    public Response getResultsFile() {
+        File file = new File(FILE_PATH_RESULTS);
+
+        ResponseBuilder response = Response.ok((Object) file);
+        response.header("Content-Disposition",
+                "attachment; filename=student-excel-file.xls");
+        return response.build();
     }
 
 }
